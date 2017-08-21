@@ -8,6 +8,10 @@ Project02 - [Tap Counter](https://github.com/gary87004/IOS-Projects/tree/master/
 
 ![Alt text](https://github.com/gary87004/IOS-Projects/blob/master/Project02%20Tap%20Counter/TapCount.gif)
 
+Project03 - [TapOrHold Counter](https://github.com/gary87004/IOS-Projects/tree/master/Project03%20TapOrHold%20Counter)
+
+![Alt text](https://github.com/gary87004/IOS-Projects/blob/master/Project03%20TapOrHold%20Counter/tap_hold.gif)
+
 Project04 - [Change color](https://github.com/gary87004/IOS-Projects/tree/master/Project04%20Change%20color)
 
 ![Alt text](https://github.com/gary87004/IOS-Projects/blob/master/Project04%20Change%20color/Change_color.gif)
