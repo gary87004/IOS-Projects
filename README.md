@@ -31,3 +31,7 @@ Project07 - [Add and Delete New Item](https://github.com/gary87004/IOS-Projects/
 Project08 - [AddPhoto](https://github.com/gary87004/IOS-Projects/tree/master/Project08%20AddPhoto)
 
 ![Alt text](https://github.com/gary87004/IOS-Projects/blob/master/Project08%20AddPhoto/AddPhoto.gif)
+
+Project09 - [SearchBar](https://github.com/gary87004/IOS-Projects/tree/master/Project09%20SearchBar)
+
+![Alt text](https://github.com/gary87004/IOS-Projects/blob/master/Project09%20SearchBar/SearchBar.gif)
