@@ -35,3 +35,11 @@ Project08 - [AddPhoto](https://github.com/gary87004/IOS-Projects/tree/master/Pro
 Project09 - [SearchBar](https://github.com/gary87004/IOS-Projects/tree/master/Project09%20SearchBar)
 
 ![Alt text](https://github.com/gary87004/IOS-Projects/blob/master/Project09%20SearchBar/SearchBar.gif)
+
+Project10 - [Slider](https://github.com/gary87004/IOS-Projects/tree/master/Project10%20Slider)
+
+![Alt text](https://github.com/gary87004/IOS-Projects/blob/master/Project10%20Slider/slider.gif)
+
+Project11 - [RefreshDateTime](https://github.com/gary87004/IOS-Projects/tree/master/Project11%20RefreshDateTime)
+
+![Alt text](https://github.com/gary87004/IOS-Projects/blob/master/Project11%20RefreshDateTime/RefreshDate.gif)
