@@ -43,3 +43,7 @@ Project10 - [Slider](https://github.com/gary87004/IOS-Projects/tree/master/Proje
 Project11 - [RefreshDateTime](https://github.com/gary87004/IOS-Projects/tree/master/Project11%20RefreshDateTime)
 
 ![Alt text](https://github.com/gary87004/IOS-Projects/blob/master/Project11%20RefreshDateTime/RefreshDate.gif)
+
+Project12 - [Fetching and Parsing JSON from URL](https://github.com/gary87004/IOS-Projects/tree/master/Project12%20Fetching%20and%20Parsing%20JSON%20from%20URL)
+
+![Alt text](https://github.com/gary87004/IOS-Projects/blob/master/Project12%20Fetching%20and%20Parsing%20JSON%20from%20URL/Fetching%20and%20Parsing%20JSON%20from%20URL.gif)
