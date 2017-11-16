@@ -1,5 +1,9 @@
 # IOS-Projects
 
+Project00 - [Pets](https://github.com/gary87004/IOS-Projects/tree/master/Pets)
+
+![Alt text](https://github.com/gary87004/IOS-Projects/blob/master/Pets/animal.gif)
+
 Project01 - [BMI Calculator](https://github.com/gary87004/IOS-Projects/tree/master/Project01%20BMI%20Calculator)
 
 ![Alt text](https://github.com/gary87004/IOS-Projects/blob/master/Project01%20BMI%20Calculator/BMICalculator.gif)
