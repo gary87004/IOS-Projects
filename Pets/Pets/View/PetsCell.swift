@@ -15,13 +15,14 @@ class PetsCell: UICollectionViewCell {
             nameLabel.text = "姓名: \(animal?.Name ?? noName)"
             typeLabel.text = "種類: \(animal?.Type ?? noName)"
             sexLabel.text = "性別: \(animal?.Sex ?? noName)"
-
+//            print(animal)
             setupAnimalImage()
         }
     }
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()
+        
     }
     
     required init?(coder aDecoder: NSCoder) {

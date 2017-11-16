@@ -9,6 +9,8 @@
 import UIKit
 
 class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    
+    
     lazy var collectView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -20,17 +22,34 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
     }()
     let cellId = "cellId"
     let imageName = ["home","dog","cat","rabbit"]
+    var homeController: HomeController?
+    let title = ["All Animals","Dogs","Cats","Rabbit"]
     override init(frame: CGRect) {
         super.init(frame: frame)
         collectView.register(MenuCell.self, forCellWithReuseIdentifier: cellId)
-//        backgroundColor = UIColor.rgb(red: 230, green: 32, blue: 31)
         addSubview(collectView)
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": collectView]))
         
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": collectView]))
         
+        setupHorizontalBar()
         
         
+        
+    }
+    var horizontalBarLeftAnchor: NSLayoutConstraint?
+    
+    func setupHorizontalBar() {
+        let horizontalBar = UIView()
+        horizontalBar.backgroundColor = UIColor.white
+        horizontalBar.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(horizontalBar)
+        
+        horizontalBarLeftAnchor = horizontalBar.leftAnchor.constraint(equalTo: self.leftAnchor)
+        horizontalBarLeftAnchor?.isActive = true
+        horizontalBar.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        horizontalBar.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 1 / 4).isActive = true
+        horizontalBar.heightAnchor.constraint(equalToConstant: 4).isActive = true
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -46,9 +65,42 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
         return CGSize(width: frame.width / 4, height: frame.height)
     }
     
-    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let x = CGFloat(indexPath.item) * frame.width / 4
+        horizontalBarLeftAnchor?.constant = x
 
+
+        UIView.animate(withDuration: 0.75, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+            self.layoutIfNeeded()
+        }, completion: nil)
+        print(indexPath.item)
+        homeController?.navigationItem.title = title[indexPath.item]
+        
+        
+        if (indexPath.item == 0) {
+            let allType = homeController?.allType
+            homeController?.animals = allType
+        }
+        else if (indexPath.item == 1) {
+            let dogType = homeController?.dogs
+            homeController?.animals = dogType
+        }
+        else if (indexPath.item == 2) {
+            let catType = homeController?.cats
+            homeController?.animals = catType
+        }
+        else if (indexPath.item == 3) {
+            let otherType = homeController?.others
+            homeController?.animals = otherType
+        }
+        
+        DispatchQueue.main.async {
+            
+            self.homeController?.collectionView?.reloadData()
+        }
+//        print(homeController?.animals?[0])
+        
+//        homeController?.scrollToMenuIndex(menuIndex: indexPath.item)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
@@ -64,6 +116,8 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
 }
 
 class MenuCell: UICollectionViewCell {
+    
+    
     var imageView: UIImageView = {
         var iv = UIImageView()
         iv.image = UIImage(named: "dog")
@@ -72,10 +126,10 @@ class MenuCell: UICollectionViewCell {
         return iv
     }()
     
+
     override init(frame: CGRect) {
         super.init(frame:frame)
         setupViews()
-        
         
     }
     func setupViews() {
